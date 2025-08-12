@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_btn_liens_groupees",
+  "info": {
+    "displayName": "LiensGroupee",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "string"
+    },
+    "Liens": {
+      "type": "component",
+      "component": "btn.lien",
+      "repeatable": true
+    },
+    "Ordre": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

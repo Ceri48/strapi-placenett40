@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_seo_seo_metas",
+  "info": {
+    "displayName": "seo.meta",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "string",
+      "required": true
+    },
+    "noindex": {
+      "type": "boolean",
+      "required": true
+    },
+    "canonicalURL": {
+      "type": "string",
+      "required": false
+    },
+    "shareImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

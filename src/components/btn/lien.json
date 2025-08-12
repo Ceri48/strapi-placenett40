@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_btn_liens",
+  "info": {
+    "displayName": "Lien",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "Texte": {
+      "type": "string"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "Ordre": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

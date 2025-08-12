@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus",
+  "info": {
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Nom",
+      "required": true
+    },
+    "Liens": {
+      "type": "component",
+      "component": "btn.lien",
+      "repeatable": true
+    },
+    "LiensGroupee": {
+      "type": "component",
+      "component": "btn.liens-groupee",
+      "repeatable": true
+    }
+  }
+}

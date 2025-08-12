@@ -1,0 +1,87 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "backgroundMobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "backgroundColor": {
+      "type": "string",
+      "required": true,
+      "regex": "^#[0-9a-fA-F]{6}$"
+    },
+    "overlayColor": {
+      "type": "string",
+      "required": true,
+      "regex": "^#[0-9a-fA-F]{6}$"
+    },
+    "overlayOpacity": {
+      "type": "decimal",
+      "required": true,
+      "default": 1,
+      "min": 0,
+      "max": 1
+    },
+    "backgroundSize": {
+      "type": "enumeration",
+      "required": true,
+      "default": "auto",
+      "enum": [
+        "cover",
+        "contain",
+        "auto"
+      ]
+    },
+    "backgroundPosition": {
+      "type": "enumeration",
+      "enum": [
+        "center",
+        "center top"
+      ]
+    },
+    "backgroundRepeat": {
+      "type": "enumeration",
+      "default": "no-repeat",
+      "enum": [
+        "no-repeat",
+        "repeat",
+        "repeat-x",
+        "repeat-y"
+      ]
+    },
+    "backgroundAttachment": {
+      "type": "enumeration",
+      "default": "fixed",
+      "enum": [
+        "scroll",
+        "fixed"
+      ]
+    }
+  }
+}

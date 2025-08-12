@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "accueils",
+  "info": {
+    "singularName": "accueil",
+    "pluralName": "accueils",
+    "displayName": "Accueil"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Accueil": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Accueil"
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo-meta",
+      "repeatable": false
+    },
+    "FondEcran": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}
