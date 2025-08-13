@@ -385,10 +385,13 @@ export interface ApiAccueilAccueil extends Struct.SingleTypeSchema {
   };
   attributes: {
     Accueil: Schema.Attribute.String;
+    carrousel: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::carrousel.carrousel'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    FondEcran: Schema.Attribute.Media<'images' | 'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -428,6 +431,39 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     seo: Schema.Attribute.Component<'seo.seo-meta', false>;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
     titre: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCarrouselCarrousel extends Struct.CollectionTypeSchema {
+  collectionName: 'carrousels';
+  info: {
+    displayName: 'Carrousel';
+    pluralName: 'carrousels';
+    singularName: 'carrousel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::carrousel.carrousel'
+    > &
+      Schema.Attribute.Private;
+    Nom: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    Photos: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'Nom'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1087,6 +1123,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::accueil.accueil': ApiAccueilAccueil;
       'api::article.article': ApiArticleArticle;
+      'api::carrousel.carrousel': ApiCarrouselCarrousel;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;

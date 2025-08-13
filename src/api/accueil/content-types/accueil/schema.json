@@ -23,14 +23,10 @@
       "component": "seo.seo-meta",
       "repeatable": false
     },
-    "FondEcran": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
+    "carrousel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::carrousel.carrousel"
     }
   }
 }
