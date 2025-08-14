@@ -13,7 +13,7 @@
   "attributes": {
     "background": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
         "files",
@@ -23,7 +23,7 @@
     },
     "backgroundMobile": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
         "files",

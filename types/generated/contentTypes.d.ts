@@ -509,13 +509,15 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
   attributes: {
     background: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
     backgroundAttachment: Schema.Attribute.Enumeration<['scroll', 'fixed']> &
       Schema.Attribute.DefaultTo<'fixed'>;
     backgroundColor: Schema.Attribute.String & Schema.Attribute.Required;
     backgroundMobile: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
     backgroundPosition: Schema.Attribute.Enumeration<['center', 'center top']>;
     backgroundRepeat: Schema.Attribute.Enumeration<
